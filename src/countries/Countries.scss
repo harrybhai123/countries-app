@@ -1,0 +1,82 @@
+$countries-container-bg: #242424;
+$search-container-bg: #242424;
+$card-bg: #242424;
+$card-border-radius: 8px;
+$card-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+$card-padding: 16px;
+
+.countries-container {
+  background-color: $countries-container-bg;
+  padding: 16px;
+  width: 100%;
+
+  .search-container {
+    background-color: $search-container-bg;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shadow;
+
+    input {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .country-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    .country-card {
+      text-decoration: none;
+      color: aqua;
+      background-color: $card-bg;
+      border-radius: $card-border-radius;
+      box-shadow: $card-box-shadow;
+      padding: $card-padding;
+      transition: transform 0.3s ease;
+      animation: slideIn 0.5s ease;
+      width: 200px;
+      margin: 0 auto;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: $card-border-radius;
+        margin-bottom: 8px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
