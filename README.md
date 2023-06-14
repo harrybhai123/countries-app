@@ -10,7 +10,7 @@ A web application to discover information about different countries.
 
 - Search for countries by name
 - View detailed information about each country
-- Responsive design for mobile and desktop
+- Responsive design for mobile, tab and desktop
 
 ## Demo
 
